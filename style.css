@@ -1,0 +1,238 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1a3a6b;
+  color: white;
+}
+
+/* Logo + Title */
+.header-brand-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo-tagline {
+  font-size: 13px;
+}
+
+/* ===== NAVBAR ===== */
+.header-nav-bar {
+  display: flex;
+  justify-content: center;
+  background: #2a5298;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===== SECTIONS ===== */
+.page-section {
+  padding: 80px 40px;
+  margin-top: 120px;
+}
+
+.section-card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Headings */
+.sec-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.sec-body {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== HOME ===== */
+#home .section-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-visual {
+  background: #1a3a6b;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ===== ABOUT ===== */
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ===== JOURNAL ===== */
+.jgrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.jcard {
+  background: #2a5298;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ===== NEWS ===== */
+.nlist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nrow {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ===== EVENTS ===== */
+.egrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.ecard {
+  background: white;
+  padding: 15px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #ddd;
+}
+
+/* ===== CONTACT ===== */
+.crow-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #1a3a6b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .two-col,
+  #home .section-card {
+    flex-direction: column;
+  }
+}
+.scroll-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 220px;
+  height: 220px;
+  background: #1a3a6b;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FIXED HEADER */
+.scroll-header {
+  background: #16335c;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* SCROLL AREA */
+.scroll-content {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* TEXT ANIMATION */
+.scroll-text {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  animation: scrollUp 12s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes scrollUp {
+  0% { top: 100%; }
+  100% { top: -100%; }
+}
